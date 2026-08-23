@@ -8,162 +8,164 @@
 <meta property="og:title" content="MAKRAO — Workspace Essentials, Direct & In Bulk">
 <meta property="og:description" content="The desk essentials that just work. Rated on Amazon.ae. Bulk orders direct across the UAE.">
 <meta property="og:type" content="website">
+<meta name="theme-color" content="#15399F">
+<link rel="icon" href="makrao-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* desk-surface palette — deep charcoal like a premium desk mat, warm paper type,
-     amber pulled from the MAKRAO logo (not a trend neon) */
-  --void:#0C0D0F;
-  --desk:#141619;
-  --desk-2:#1B1E22;
-  --edge:#2A2E34;
-  --edge-2:#3A3F47;
-  --paper:#ECEAE3;
-  --paper-dim:#9DA1A8;
-  --paper-faint:#63676E;
-  --amber:#F5A623;
-  --amber-deep:#C9821A;
+  /* light, professional palette — brand blue pulled straight from the MAKRAO logo */
+  --blue:#15399F;
+  --blue-600:#1B47C4;
+  --blue-50:#EEF2FC;
+  --ink:#0E1626;
+  --body:#47536B;
+  --muted:#8892A5;
+  --line:#E6EAF1;
+  --bg:#FFFFFF;
+  --bg-soft:#F5F7FB;
+  --card:#FFFFFF;
   --wa:#25D366;
+  --wa-ink:#05320F;
+  --star:#F5A623;
+  --shadow:0 1px 2px rgba(16,22,38,.04),0 8px 24px -16px rgba(16,22,38,.18);
   --r:14px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--void);color:var(--paper);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--body);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .mono{font-family:'JetBrains Mono',monospace}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
 a{color:inherit;text-decoration:none}
 
-/* spec-label: the signature system — monospace stamps like tech specs on gear */
-.spec{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
+/* spec-label: monospace stamps in brand blue */
+.spec{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue)}
 
 /* ---------- header ---------- */
-header{position:sticky;top:0;z-index:60;background:rgba(12,13,15,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--edge)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
-.brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.4rem;letter-spacing:.16em;display:flex;align-items:center;gap:2px}
-.brand b{color:var(--amber)}
-.brand .reg{font-size:.6rem;vertical-align:super;color:var(--paper-faint)}
-.nav-cta{display:flex;align-items:center;gap:8px;background:var(--wa);color:#062b14;font-weight:600;font-size:.85rem;padding:10px 18px;border-radius:999px;transition:transform .15s,filter .15s}
-.nav-cta:hover{transform:translateY(-1px);filter:brightness(1.06)}
-.nav-cta svg{width:16px;height:16px;fill:#062b14}
+header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center}
+.brand img{height:30px;width:auto;display:block}
+.nav-cta{display:flex;align-items:center;gap:8px;background:var(--wa);color:var(--wa-ink);font-weight:600;font-size:.85rem;padding:10px 18px;border-radius:999px;transition:transform .15s,filter .15s,box-shadow .15s;box-shadow:0 6px 16px -8px rgba(37,211,102,.6)}
+.nav-cta:hover{transform:translateY(-1px);filter:brightness(1.04)}
+.nav-cta svg{width:16px;height:16px;fill:var(--wa-ink)}
 
 /* ---------- hero ---------- */
-.hero{position:relative;padding:88px 0 72px;overflow:hidden}
-/* faint desk-grid: the surface the products sit on */
+.hero{position:relative;padding:96px 0 78px;overflow:hidden;background:linear-gradient(180deg,var(--bg-soft),var(--bg))}
 .hero::before{content:"";position:absolute;inset:0;background:
-    linear-gradient(var(--edge) 1px,transparent 1px),
-    linear-gradient(90deg,var(--edge) 1px,transparent 1px);
-  background-size:52px 52px;opacity:.28;mask-image:radial-gradient(ellipse 80% 65% at 50% 35%,#000 30%,transparent 78%);pointer-events:none}
-.hero::after{content:"";position:absolute;top:-30%;right:-10%;width:620px;height:620px;background:radial-gradient(circle,rgba(245,166,35,.14),transparent 62%);pointer-events:none}
-.hero-inner{position:relative;max-width:760px}
-.hero .spec{display:inline-block;margin-bottom:22px;padding:7px 13px;border:1px solid var(--edge-2);border-radius:999px}
-.hero h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(2.5rem,6vw,4.3rem);line-height:1.02;letter-spacing:-.02em}
-.hero h1 .amberword{color:var(--amber);position:relative;white-space:nowrap}
-.hero p.lede{margin:24px 0 8px;font-size:1.18rem;color:var(--paper-dim);max-width:52ch}
-.hero p.ar{font-family:'JetBrains Mono',monospace;color:var(--paper-faint);font-size:.9rem;margin-bottom:34px;direction:rtl}
+    linear-gradient(rgba(21,57,159,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(21,57,159,.05) 1px,transparent 1px);
+  background-size:52px 52px;mask-image:radial-gradient(ellipse 75% 70% at 25% 30%,#000 20%,transparent 75%);pointer-events:none}
+.hero::after{content:"";position:absolute;top:-25%;right:-8%;width:620px;height:620px;background:radial-gradient(circle,rgba(21,57,159,.08),transparent 62%);pointer-events:none}
+.hero-inner{position:relative;max-width:760px;text-align:left}
+.hero .spec{display:inline-block;margin-bottom:22px;padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:#fff}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(2.5rem,6vw,4.3rem);line-height:1.04;letter-spacing:-.02em;color:var(--ink)}
+.hero h1 .amberword{color:var(--blue);position:relative;white-space:nowrap}
+.hero p.lede{margin:24px 0 8px;font-size:1.18rem;color:var(--body);max-width:52ch}
+.hero p.ar{font-family:'JetBrains Mono',monospace;color:var(--muted);font-size:.9rem;margin-bottom:34px;direction:rtl}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.98rem;padding:15px 26px;border-radius:var(--r);transition:transform .15s,filter .15s,border-color .15s}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.98rem;padding:15px 26px;border-radius:var(--r);transition:transform .15s,filter .15s,border-color .15s,color .15s,box-shadow .15s}
 .btn svg{width:18px;height:18px}
-.btn-primary{background:var(--wa);color:#062b14}
-.btn-primary svg{fill:#062b14}
-.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.06)}
-.btn-ghost{border:1px solid var(--edge-2);color:var(--paper)}
-.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+.btn-primary{background:var(--wa);color:var(--wa-ink);box-shadow:0 10px 24px -10px rgba(37,211,102,.6)}
+.btn-primary svg{fill:var(--wa-ink)}
+.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:#fff}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
 /* trust ticker */
-.ticker{position:relative;margin-top:56px;display:flex;gap:14px 40px;flex-wrap:wrap;align-items:center;padding-top:26px;border-top:1px solid var(--edge)}
-.ticker .stat b{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;color:var(--paper);margin-right:8px}
-.ticker .stat span{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--paper-faint)}
+.ticker{position:relative;margin-top:56px;display:flex;gap:14px 40px;flex-wrap:wrap;align-items:center;padding-top:26px;border-top:1px solid var(--line)}
+.ticker .stat b{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;color:var(--ink);margin-right:8px}
+.ticker .stat span{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 
 /* ---------- section frame ---------- */
-section{position:relative;padding:74px 0}
-.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap}
-.sec-head h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.01em;line-height:1.1}
+section{position:relative;padding:80px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.sec-head h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.01em;line-height:1.1;color:var(--ink)}
 .sec-head .lbl{margin-bottom:12px}
-.sec-head p{color:var(--paper-dim);max-width:46ch;font-size:.98rem}
+.sec-head p{color:var(--body);max-width:46ch;font-size:.98rem}
 
 /* ---------- product tiles ---------- */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:20px}
-.tile{position:relative;background:linear-gradient(160deg,var(--desk-2),var(--desk));border:1px solid var(--edge);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s}
-.tile:hover{transform:translateY(-4px);border-color:var(--edge-2);box-shadow:0 20px 40px -24px #000}
-.tile .shot{position:relative;aspect-ratio:1/1;background:#F4F3EF;overflow:hidden}
+.tile{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .2s,border-color .2s,box-shadow .2s}
+.tile:hover{transform:translateY(-4px);border-color:#cdd6e6;box-shadow:0 18px 40px -22px rgba(16,22,38,.35)}
+.tile .shot{position:relative;aspect-ratio:1/1;background:#F4F6F9;overflow:hidden;border-bottom:1px solid var(--line)}
 .tile .shot img{position:absolute;inset:14px;width:calc(100% - 28px);height:calc(100% - 28px);object-fit:contain;mix-blend-mode:multiply}
-.tile .shot .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#9c9a92;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-align:center;padding:0 10px}
-.tile .tag{position:absolute;top:10px;left:10px;z-index:2;background:rgba(12,13,15,.85);color:var(--amber);font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;padding:5px 9px;border-radius:6px;text-transform:uppercase}
-.tile .rating{position:absolute;top:10px;right:10px;z-index:2;background:rgba(12,13,15,.85);color:var(--paper);font-family:'JetBrains Mono',monospace;font-size:.68rem;padding:5px 9px;border-radius:6px;display:flex;align-items:center;gap:4px}
-.tile .rating svg{width:11px;height:11px;fill:var(--amber)}
+.tile .shot .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#9aa3b4;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-align:center;padding:0 10px}
+.tile .tag{position:absolute;top:10px;left:10px;z-index:2;background:var(--blue);color:#fff;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;padding:5px 9px;border-radius:6px;text-transform:uppercase}
+.tile .rating{position:absolute;top:10px;right:10px;z-index:2;background:#fff;border:1px solid var(--line);color:var(--ink);font-family:'JetBrains Mono',monospace;font-size:.68rem;padding:5px 9px;border-radius:6px;display:flex;align-items:center;gap:4px;box-shadow:var(--shadow)}
+.tile .rating svg{width:11px;height:11px;fill:var(--star)}
 .tile .body{padding:18px;display:flex;flex-direction:column;gap:12px;flex:1}
-.tile h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.02rem;line-height:1.32}
-.tile .desc{font-size:.86rem;color:var(--paper-dim);line-height:1.5}
-.tile .meta{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px;border-top:1px solid var(--edge)}
-.tile .price{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.3rem}
-.tile .price small{font-size:.72rem;color:var(--paper-faint);font-weight:500;margin-right:3px}
+.tile h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.02rem;line-height:1.32;color:var(--ink)}
+.tile .desc{font-size:.86rem;color:var(--body);line-height:1.5}
+.tile .meta{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px;border-top:1px solid var(--line)}
+.tile .price{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.3rem;color:var(--ink)}
+.tile .price small{font-size:.72rem;color:var(--muted);font-weight:500;margin-right:3px}
 .tile .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .tile .actions a{justify-content:center;padding:11px;font-size:.82rem;border-radius:9px}
-.mini-wa{background:var(--wa);color:#062b14;display:inline-flex;align-items:center;gap:6px;font-weight:600}
-.mini-wa svg{width:14px;height:14px;fill:#062b14}
-.mini-amz{border:1px solid var(--edge-2);color:var(--paper);display:inline-flex;align-items:center;justify-content:center;font-weight:600;transition:border-color .15s,color .15s}
-.mini-amz:hover{border-color:var(--amber);color:var(--amber)}
+.mini-wa{background:var(--wa);color:var(--wa-ink);display:inline-flex;align-items:center;gap:6px;font-weight:600}
+.mini-wa svg{width:14px;height:14px;fill:var(--wa-ink)}
+.mini-amz{border:1px solid var(--line);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;font-weight:600;transition:border-color .15s,color .15s}
+.mini-amz:hover{border-color:var(--blue);color:var(--blue)}
 
 /* ---------- bulk band ---------- */
 .bulk{background:
-    radial-gradient(circle at 85% 20%,rgba(245,166,35,.1),transparent 55%),
-    var(--desk);border-top:1px solid var(--edge);border-bottom:1px solid var(--edge)}
+    radial-gradient(circle at 88% 15%,rgba(21,57,159,.06),transparent 55%),
+    var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .bulk-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-.bulk h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.8rem,3.6vw,2.7rem);line-height:1.08;letter-spacing:-.01em;margin:14px 0 18px}
-.bulk p{color:var(--paper-dim);font-size:1.04rem;margin-bottom:14px}
+.bulk h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.8rem,3.6vw,2.7rem);line-height:1.08;letter-spacing:-.01em;margin:14px 0 18px;color:var(--ink)}
+.bulk p{color:var(--body);font-size:1.04rem;margin-bottom:14px}
 .bulk ul{list-style:none;margin:22px 0 30px;display:flex;flex-direction:column;gap:12px}
-.bulk li{display:flex;gap:12px;align-items:flex-start;font-size:.98rem}
-.bulk li svg{width:20px;height:20px;fill:none;stroke:var(--amber);stroke-width:2;flex:none;margin-top:2px}
+.bulk li{display:flex;gap:12px;align-items:flex-start;font-size:.98rem;color:var(--body)}
+.bulk li svg{width:20px;height:20px;fill:none;stroke:var(--blue);stroke-width:2;flex:none;margin-top:2px}
 /* the tier card — spec-sheet styling */
-.tiers{background:var(--void);border:1px solid var(--edge-2);border-radius:var(--r);overflow:hidden}
-.tiers .tc-head{padding:16px 20px;border-bottom:1px solid var(--edge);display:flex;justify-content:space-between;align-items:center}
-.tiers .tc-head .spec{color:var(--paper-faint)}
-.tiers .tc-head b{font-family:'Space Grotesk',sans-serif;font-weight:600}
-.tiers .row{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;border-bottom:1px solid var(--edge);font-family:'JetBrains Mono',monospace;font-size:.9rem}
+.tiers{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.tiers .tc-head{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.tiers .tc-head .spec{color:var(--muted)}
+.tiers .tc-head b{font-family:'Space Grotesk',sans-serif;font-weight:600;color:var(--ink)}
+.tiers .row{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;border-bottom:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:.9rem;color:var(--ink)}
 .tiers .row:last-child{border-bottom:none}
-.tiers .row .q{color:var(--paper-dim)}
-.tiers .row.hot{background:linear-gradient(90deg,rgba(245,166,35,.08),transparent)}
-.tiers .row .save{color:var(--amber);font-size:.72rem}
-.tiers .foot{padding:16px 20px;background:var(--desk-2)}
-.tiers .foot a{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--wa);color:#062b14;font-weight:600;padding:13px;border-radius:10px;font-size:.92rem}
-.tiers .foot a svg{width:17px;height:17px;fill:#062b14}
+.tiers .row .q{color:var(--body)}
+.tiers .row.hot{background:var(--blue-50)}
+.tiers .row .save{color:var(--blue);font-size:.72rem}
+.tiers .foot{padding:16px 20px;background:var(--bg-soft)}
+.tiers .foot a{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--wa);color:var(--wa-ink);font-weight:600;padding:13px;border-radius:10px;font-size:.92rem}
+.tiers .foot a svg{width:17px;height:17px;fill:var(--wa-ink)}
 
 /* ---------- process ---------- */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.step{background:var(--desk);border:1px solid var(--edge);border-radius:var(--r);padding:26px 22px;position:relative}
-.step .n{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--amber);letter-spacing:.1em;margin-bottom:16px}
-.step h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.1rem;margin-bottom:8px}
-.step p{color:var(--paper-dim);font-size:.9rem}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px 22px;position:relative;box-shadow:var(--shadow)}
+.step .n{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--blue);letter-spacing:.1em;margin-bottom:16px}
+.step h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.1rem;margin-bottom:8px;color:var(--ink)}
+.step p{color:var(--body);font-size:.9rem}
 
 /* ---------- RFQ ---------- */
-.rfq-shell{max-width:660px;margin:0 auto;background:linear-gradient(160deg,var(--desk-2),var(--desk));border:1px solid var(--edge-2);border-radius:var(--r);padding:34px}
+.rfq-shell{max-width:660px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:34px;box-shadow:var(--shadow)}
 .rfq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.rfq label{display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-faint);margin-bottom:6px}
-.rfq input,.rfq select,.rfq textarea{width:100%;padding:12px 13px;background:var(--void);border:1px solid var(--edge-2);border-radius:9px;color:var(--paper);font:inherit;font-size:.94rem;transition:border-color .15s}
-.rfq input:focus,.rfq select:focus,.rfq textarea:focus{outline:none;border-color:var(--amber)}
+.rfq label{display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.rfq input,.rfq select,.rfq textarea{width:100%;padding:12px 13px;background:#fff;border:1px solid var(--line);border-radius:9px;color:var(--ink);font:inherit;font-size:.94rem;transition:border-color .15s,box-shadow .15s}
+.rfq input:focus,.rfq select:focus,.rfq textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-50)}
 .rfq .full{grid-column:1/-1}
-.rfq button{width:100%;margin-top:8px;background:var(--amber);color:#1a1200;border:none;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;padding:15px;border-radius:10px;cursor:pointer;transition:filter .15s,transform .15s}
-.rfq button:hover{filter:brightness(1.05);transform:translateY(-1px)}
+.rfq button{width:100%;margin-top:8px;background:var(--blue);color:#fff;border:none;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;padding:15px;border-radius:10px;cursor:pointer;transition:filter .15s,transform .15s,box-shadow .15s;box-shadow:0 10px 24px -12px rgba(21,57,159,.7)}
+.rfq button:hover{filter:brightness(1.06);transform:translateY(-1px)}
 
 /* ---------- footer ---------- */
-footer{border-top:1px solid var(--edge);padding:44px 0 40px}
+footer{border-top:1px solid var(--line);padding:48px 0 40px;background:var(--bg-soft)}
 .foot-grid{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:flex-start}
-footer .brand{font-size:1.15rem;margin-bottom:10px}
-footer p{color:var(--paper-faint);font-size:.86rem;line-height:1.7}
-footer a.amz{color:var(--amber);font-family:'JetBrains Mono',monospace;font-size:.82rem}
-.foot-legal{margin-top:26px;padding-top:20px;border-top:1px solid var(--edge);font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--paper-faint)}
+footer .brand img{height:26px;width:auto;margin-bottom:12px}
+footer p{color:var(--muted);font-size:.86rem;line-height:1.7}
+footer a.amz{color:var(--blue);font-family:'JetBrains Mono',monospace;font-size:.82rem}
+.foot-legal{margin-top:26px;padding-top:20px;border-top:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted)}
 
 /* float */
 .wa-float{position:fixed;bottom:22px;right:22px;z-index:70;width:58px;height:58px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.5);transition:transform .18s}
 .wa-float:hover{transform:scale(1.07)}
-.wa-float svg{width:30px;height:30px;fill:#062b14}
+.wa-float svg{width:30px;height:30px;fill:var(--wa-ink)}
 
 @media(max-width:820px){
   .bulk-grid{grid-template-columns:1fr;gap:36px}
   .rfq-grid{grid-template-columns:1fr}
-  section{padding:56px 0}
-  .hero{padding:60px 0 52px}
+  section{padding:60px 0}
+  .hero{padding:64px 0 54px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -172,7 +174,7 @@ footer a.amz{color:var(--amber);font-family:'JetBrains Mono',monospace;font-size
 
 <header>
   <div class="wrap nav">
-    <div class="brand">MAK<b>RAO</b><span class="reg">®</span></div>
+    <a class="brand" href="#" aria-label="MAKRAO home"><img src="makrao-logo.png" alt="MAKRAO"></a>
     <a class="nav-cta" data-wa="Hi MAKRAO — I'd like a bulk quote.">
       <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>
       Bulk quote
@@ -181,23 +183,25 @@ footer a.amz{color:var(--amber);font-family:'JetBrains Mono',monospace;font-size
 </header>
 
 <div class="hero">
-  <div class="wrap hero-inner">
-    <span class="spec">UAE Brand · Rated on Amazon.ae</span>
-    <h1>The desk essentials<br>that just <span class="amberword">work.</span></h1>
-    <p class="lede">Mouse pads, cables, tape and signs — engineered to be the reliable, no-drama version of the thing you buy once and forget. Order a single unit on Amazon, or in bulk direct from us.</p>
-    <p class="ar">لوازم المكتب التي تعمل ببساطة — بالقطعة أو بالجملة</p>
-    <div class="hero-ctas">
-      <a class="btn btn-primary" data-wa="Hi MAKRAO — I'd like a bulk quote.">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>
-        Order in bulk
-      </a>
-      <a class="btn btn-ghost" href="#catalog">Browse the range</a>
-    </div>
-    <div class="ticker">
-      <div class="stat"><b>11</b><span>Products live</span></div>
-      <div class="stat"><b>300+</b><span>Units / month</span></div>
-      <div class="stat"><b>4.3★</b><span>Avg rating</span></div>
-      <div class="stat"><b>UAE</b><span>Wide delivery</span></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="spec">UAE Brand · Rated on Amazon.ae</span>
+      <h1>The desk essentials<br>that just <span class="amberword">work.</span></h1>
+      <p class="lede">Mouse pads, cables, tape and signs — engineered to be the reliable, no-drama version of the thing you buy once and forget. Order a single unit on Amazon, or in bulk direct from us.</p>
+      <p class="ar">لوازم المكتب التي تعمل ببساطة — بالقطعة أو بالجملة</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" data-wa="Hi MAKRAO — I'd like a bulk quote.">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>
+          Order in bulk
+        </a>
+        <a class="btn btn-ghost" href="#catalog">Browse the range</a>
+      </div>
+      <div class="ticker">
+        <div class="stat"><b>11</b><span>Products live</span></div>
+        <div class="stat"><b>300+</b><span>Units / month</span></div>
+        <div class="stat"><b>4.3★</b><span>Avg rating</span></div>
+        <div class="stat"><b>UAE</b><span>Wide delivery</span></div>
+      </div>
     </div>
   </div>
 </div>
@@ -277,15 +281,15 @@ footer a.amz{color:var(--amber);font-family:'JetBrains Mono',monospace;font-size
 <footer>
   <div class="wrap foot-grid">
     <div>
-      <div class="brand">MAK<b style="color:var(--amber)">RAO</b><span class="reg">®</span></div>
+      <div class="brand"><img src="makrao-logo.png" alt="MAKRAO"></div>
       <p>Workspace essentials, made to be reliable.<br>United Arab Emirates.</p>
     </div>
     <div>
-      <p class="spec" style="color:var(--paper-faint);margin-bottom:8px">Shop</p>
+      <p class="spec" style="color:var(--muted);margin-bottom:8px">Shop</p>
       <a class="amz" href="https://www.amazon.ae/stores/page/7575E3EE-64D5-4D11-8C70-DFA39236BD59">Amazon.ae Brand Store →</a>
     </div>
     <div>
-      <p class="spec" style="color:var(--paper-faint);margin-bottom:8px">Bulk</p>
+      <p class="spec" style="color:var(--muted);margin-bottom:8px">Bulk</p>
       <a class="amz" data-wa="Hi MAKRAO — I'd like a bulk quote.">WhatsApp us →</a>
     </div>
   </div>
@@ -300,7 +304,9 @@ footer a.amz{color:var(--amber);font-family:'JetBrains Mono',monospace;font-size
 /* =========================================================
    EDIT ONLY THIS BLOCK
    1) WA_NUMBER — WhatsApp Business number, digits only, intl (e.g. 9715XXXXXXXX)
-   2) Products below carry your real Amazon data. Photos auto-load by ASIN.
+   2) Products below carry your real Amazon data. Photos load by Amazon image id (img).
+      To get a new product's img id: open its amazon.ae/dp/<ASIN> page and read
+      document.getElementById('landingImage').src — use the id before "._AC_".
       To adjust bulk tiers, edit the .tiers section in the HTML above.
    ========================================================= */
 const WA_NUMBER = "971552974808";
