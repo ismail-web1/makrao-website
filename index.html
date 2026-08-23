@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAKRAO — Workspace Essentials, Direct & In Bulk</title>
+<meta name="description" content="MAKRAO makes the desk essentials that just work — mouse pads, cables, tape and signs. Rated on Amazon.ae. Order singles or in bulk direct from the brand across the UAE.">
+<meta property="og:title" content="MAKRAO — Workspace Essentials, Direct & In Bulk">
+<meta property="og:description" content="The desk essentials that just work. Rated on Amazon.ae. Bulk orders direct across the UAE.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* desk-surface palette — deep charcoal like a premium desk mat, warm paper type,
+     amber pulled from the MAKRAO logo (not a trend neon) */
+  --void:#0C0D0F;
+  --desk:#141619;
+  --desk-2:#1B1E22;
+  --edge:#2A2E34;
+  --edge-2:#3A3F47;
+  --paper:#ECEAE3;
+  --paper-dim:#9DA1A8;
+  --paper-faint:#63676E;
+  --amber:#F5A623;
+  --amber-deep:#C9821A;
+  --wa:#25D366;
+  --r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--void);color:var(--paper);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.mono{font-family:'JetBrains Mono',monospace}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+
+/* spec-label: the signature system — monospace stamps like tech specs on gear */
+.spec{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:60;background:rgba(12,13,15,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--edge)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.4rem;letter-spacing:.16em;display:flex;align-items:center;gap:2px}
+.brand b{color:var(--amber)}
+.brand .reg{font-size:.6rem;vertical-align:super;color:var(--paper-faint)}
+.nav-cta{display:flex;align-items:center;gap:8px;background:var(--wa);color:#062b14;font-weight:600;font-size:.85rem;padding:10px 18px;border-radius:999px;transition:transform .15s,filter .15s}
+.nav-cta:hover{transform:translateY(-1px);filter:brightness(1.06)}
+.nav-cta svg{width:16px;height:16px;fill:#062b14}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:88px 0 72px;overflow:hidden}
+/* faint desk-grid: the surface the products sit on */
+.hero::before{content:"";position:absolute;inset:0;background:
+    linear-gradient(var(--edge) 1px,transparent 1px),
+    linear-gradient(90deg,var(--edge) 1px,transparent 1px);
+  background-size:52px 52px;opacity:.28;mask-image:radial-gradient(ellipse 80% 65% at 50% 35%,#000 30%,transparent 78%);pointer-events:none}
+.hero::after{content:"";position:absolute;top:-30%;right:-10%;width:620px;height:620px;background:radial-gradient(circle,rgba(245,166,35,.14),transparent 62%);pointer-events:none}
+.hero-inner{position:relative;max-width:760px}
+.hero .spec{display:inline-block;margin-bottom:22px;padding:7px 13px;border:1px solid var(--edge-2);border-radius:999px}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(2.5rem,6vw,4.3rem);line-height:1.02;letter-spacing:-.02em}
+.hero h1 .amberword{color:var(--amber);position:relative;white-space:nowrap}
+.hero p.lede{margin:24px 0 8px;font-size:1.18rem;color:var(--paper-dim);max-width:52ch}
+.hero p.ar{font-family:'JetBrains Mono',monospace;color:var(--paper-faint);font-size:.9rem;margin-bottom:34px;direction:rtl}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.98rem;padding:15px 26px;border-radius:var(--r);transition:transform .15s,filter .15s,border-color .15s}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--wa);color:#062b14}
+.btn-primary svg{fill:#062b14}
+.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn-ghost{border:1px solid var(--edge-2);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+/* trust ticker */
+.ticker{position:relative;margin-top:56px;display:flex;gap:14px 40px;flex-wrap:wrap;align-items:center;padding-top:26px;border-top:1px solid var(--edge)}
+.ticker .stat b{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;color:var(--paper);margin-right:8px}
+.ticker .stat span{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--paper-faint)}
+
+/* ---------- section frame ---------- */
+section{position:relative;padding:74px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.sec-head h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.01em;line-height:1.1}
+.sec-head .lbl{margin-bottom:12px}
+.sec-head p{color:var(--paper-dim);max-width:46ch;font-size:.98rem}
+
+/* ---------- product tiles ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:20px}
+.tile{position:relative;background:linear-gradient(160deg,var(--desk-2),var(--desk));border:1px solid var(--edge);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s}
+.tile:hover{transform:translateY(-4px);border-color:var(--edge-2);box-shadow:0 20px 40px -24px #000}
+.tile .shot{position:relative;aspect-ratio:1/1;background:#F4F3EF;display:flex;align-items:center;justify-content:center;padding:14px}
+.tile .shot img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.tile .shot .ph{color:#9c9a92;font-family:'JetBrains Mono',monospace;font-size:.7rem;text-align:center;padding:0 10px}
+.tile .tag{position:absolute;top:10px;left:10px;z-index:2;background:rgba(12,13,15,.85);color:var(--amber);font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.12em;padding:5px 9px;border-radius:6px;text-transform:uppercase}
+.tile .rating{position:absolute;top:10px;right:10px;z-index:2;background:rgba(12,13,15,.85);color:var(--paper);font-family:'JetBrains Mono',monospace;font-size:.68rem;padding:5px 9px;border-radius:6px;display:flex;align-items:center;gap:4px}
+.tile .rating svg{width:11px;height:11px;fill:var(--amber)}
+.tile .body{padding:18px;display:flex;flex-direction:column;gap:12px;flex:1}
+.tile h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.02rem;line-height:1.32}
+.tile .desc{font-size:.86rem;color:var(--paper-dim);line-height:1.5}
+.tile .meta{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px;border-top:1px solid var(--edge)}
+.tile .price{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.3rem}
+.tile .price small{font-size:.72rem;color:var(--paper-faint);font-weight:500;margin-right:3px}
+.tile .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tile .actions a{justify-content:center;padding:11px;font-size:.82rem;border-radius:9px}
+.mini-wa{background:var(--wa);color:#062b14;display:inline-flex;align-items:center;gap:6px;font-weight:600}
+.mini-wa svg{width:14px;height:14px;fill:#062b14}
+.mini-amz{border:1px solid var(--edge-2);color:var(--paper);display:inline-flex;align-items:center;justify-content:center;font-weight:600;transition:border-color .15s,color .15s}
+.mini-amz:hover{border-color:var(--amber);color:var(--amber)}
+
+/* ---------- bulk band ---------- */
+.bulk{background:
+    radial-gradient(circle at 85% 20%,rgba(245,166,35,.1),transparent 55%),
+    var(--desk);border-top:1px solid var(--edge);border-bottom:1px solid var(--edge)}
+.bulk-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.bulk h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(1.8rem,3.6vw,2.7rem);line-height:1.08;letter-spacing:-.01em;margin:14px 0 18px}
+.bulk p{color:var(--paper-dim);font-size:1.04rem;margin-bottom:14px}
+.bulk ul{list-style:none;margin:22px 0 30px;display:flex;flex-direction:column;gap:12px}
+.bulk li{display:flex;gap:12px;align-items:flex-start;font-size:.98rem}
+.bulk li svg{width:20px;height:20px;fill:none;stroke:var(--amber);stroke-width:2;flex:none;margin-top:2px}
+/* the tier card — spec-sheet styling */
+.tiers{background:var(--void);border:1px solid var(--edge-2);border-radius:var(--r);overflow:hidden}
+.tiers .tc-head{padding:16px 20px;border-bottom:1px solid var(--edge);display:flex;justify-content:space-between;align-items:center}
+.tiers .tc-head .spec{color:var(--paper-faint)}
+.tiers .tc-head b{font-family:'Space Grotesk',sans-serif;font-weight:600}
+.tiers .row{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;border-bottom:1px solid var(--edge);font-family:'JetBrains Mono',monospace;font-size:.9rem}
+.tiers .row:last-child{border-bottom:none}
+.tiers .row .q{color:var(--paper-dim)}
+.tiers .row.hot{background:linear-gradient(90deg,rgba(245,166,35,.08),transparent)}
+.tiers .row .save{color:var(--amber);font-size:.72rem}
+.tiers .foot{padding:16px 20px;background:var(--desk-2)}
+.tiers .foot a{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--wa);color:#062b14;font-weight:600;padding:13px;border-radius:10px;font-size:.92rem}
+.tiers .foot a svg{width:17px;height:17px;fill:#062b14}
+
+/* ---------- process ---------- */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.step{background:var(--desk);border:1px solid var(--edge);border-radius:var(--r);padding:26px 22px;position:relative}
+.step .n{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--amber);letter-spacing:.1em;margin-bottom:16px}
+.step h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.1rem;margin-bottom:8px}
+.step p{color:var(--paper-dim);font-size:.9rem}
+
+/* ---------- RFQ ---------- */
+.rfq-shell{max-width:660px;margin:0 auto;background:linear-gradient(160deg,var(--desk-2),var(--desk));border:1px solid var(--edge-2);border-radius:var(--r);padding:34px}
+.rfq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.rfq label{display:block;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-faint);margin-bottom:6px}
+.rfq input,.rfq select,.rfq textarea{width:100%;padding:12px 13px;background:var(--void);border:1px solid var(--edge-2);border-radius:9px;color:var(--paper);font:inherit;font-size:.94rem;transition:border-color .15s}
+.rfq input:focus,.rfq select:focus,.rfq textarea:focus{outline:none;border-color:var(--amber)}
+.rfq .full{grid-column:1/-1}
+.rfq button{width:100%;margin-top:8px;background:var(--amber);color:#1a1200;border:none;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;padding:15px;border-radius:10px;cursor:pointer;transition:filter .15s,transform .15s}
+.rfq button:hover{filter:brightness(1.05);transform:translateY(-1px)}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--edge);padding:44px 0 40px}
+.foot-grid{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:flex-start}
+footer .brand{font-size:1.15rem;margin-bottom:10px}
+footer p{color:var(--paper-faint);font-size:.86rem;line-height:1.7}
+footer a.amz{color:var(--amber);font-family:'JetBrains Mono',monospace;font-size:.82rem}
+.foot-legal{margin-top:26px;padding-top:20px;border-top:1px solid var(--edge);font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--paper-faint)}
+
+/* float */
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:70;width:58px;height:58px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.5);transition:transform .18s}
+.wa-float:hover{transform:scale(1.07)}
+.wa-float svg{width:30px;height:30px;fill:#062b14}
+
+@media(max-width:820px){
+  .bulk-grid{grid-template-columns:1fr;gap:36px}
+  .rfq-grid{grid-template-columns:1fr}
+  section{padding:56px 0}
+  .hero{padding:60px 0 52px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">MAK<b>RAO</b><span class="reg">®</span></div>
+    <a class="nav-cta" data-wa="Hi MAKRAO — I'd like a bulk quote.">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>
+      Bulk quote
+    </a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap hero-inner">
+    <span class="spec">UAE Brand · Rated on Amazon.ae</span>
+    <h1>The desk essentials<br>that just <span class="amberword">work.</span></h1>
+    <p class="lede">Mouse pads, cables, tape and signs — engineered to be the reliable, no-drama version of the thing you buy once and forget. Order a single unit on Amazon, or in bulk direct from us.</p>
+    <p class="ar">لوازم المكتب التي تعمل ببساطة — بالقطعة أو بالجملة</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" data-wa="Hi MAKRAO — I'd like a bulk quote.">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>
+        Order in bulk
+      </a>
+      <a class="btn btn-ghost" href="#catalog">Browse the range</a>
+    </div>
+    <div class="ticker">
+      <div class="stat"><b>11</b><span>Products live</span></div>
+      <div class="stat"><b>300+</b><span>Units / month</span></div>
+      <div class="stat"><b>4.3★</b><span>Avg rating</span></div>
+      <div class="stat"><b>UAE</b><span>Wide delivery</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="catalog">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="spec lbl">The Range</div>
+        <h2>Everything on your desk,<br>done properly.</h2>
+      </div>
+      <p>Each one is live and rated on Amazon.ae. Tap Amazon to buy a single, or WhatsApp us for bulk pricing.</p>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="bulk" id="bulk">
+  <div class="wrap bulk-grid">
+    <div>
+      <div class="spec">Wholesale · B2B</div>
+      <h2>Buy direct. Skip retail. Save on every unit.</h2>
+      <p>Offices, IT resellers, training centres and gift buyers — order MAKRAO in quantity straight from the brand and pay below Amazon retail, with a proper VAT invoice.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>Published bulk tiers — no "contact us for price" runaround.</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>VAT invoice on every order, bank transfer or payment link.</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg><span>Delivered UAE-wide, or collect. Recurring supply welcome.</span></li>
+      </ul>
+    </div>
+    <div class="tiers">
+      <div class="tc-head"><b>Mouse Pad — bulk</b><span class="spec">Indicative</span></div>
+      <div class="row"><span class="q">10 – 49 units</span><span>AED 10.50<span class="save"> /unit</span></span></div>
+      <div class="row hot"><span class="q">50 – 199 units</span><span>AED 9.50<span class="save"> · best value</span></span></div>
+      <div class="row"><span class="q">200+ units</span><span>AED 8.50<span class="save"> /unit</span></span></div>
+      <div class="foot">
+        <a data-wa="Hi MAKRAO — bulk quote for mouse pads. Quantity: ">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>
+          Get bulk pricing
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head"><div><div class="spec lbl">How bulk works</div><h2>Message to delivery, in three steps.</h2></div></div>
+    <div class="steps">
+      <div class="step"><div class="n">STEP 01</div><h3>Send quantity</h3><p>Tap WhatsApp on any product or the form below. Tell us the item and how many.</p></div>
+      <div class="step"><div class="n">STEP 02</div><h3>Get quote + invoice</h3><p>We confirm stock and price the same day, with a VAT invoice. Pay by transfer or link.</p></div>
+      <div class="step"><div class="n">STEP 03</div><h3>Delivered UAE-wide</h3><p>Dispatched from our UAE stock, or collect. Recurring supply schedules welcome.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="wrap">
+    <div class="sec-head" style="justify-content:center;text-align:center"><div><div class="spec lbl">Request a quote</div><h2>Prefer email? Send the details.</h2></div></div>
+    <!-- FormSubmit sends one confirmation email to Makraoindia@gmail.com on the very first submission — click that link once to activate. -->
+    <form class="rfq-shell rfq" action="https://formsubmit.co/Makraoindia@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="MAKRAO bulk quote request">
+      <input type="hidden" name="_captcha" value="false">
+      <div class="rfq-grid">
+        <div><label>Name</label><input name="name" required></div>
+        <div><label>Company (optional)</label><input name="company"></div>
+        <div><label>Phone / WhatsApp</label><input name="phone" required></div>
+        <div><label>Emirate</label><select name="emirate"><option>Sharjah</option><option>Dubai</option><option>Abu Dhabi</option><option>Ajman</option><option>Ras Al Khaimah</option><option>Umm Al Quwain</option><option>Fujairah</option></select></div>
+        <div><label>Product</label><select name="product" id="prodsel"></select></div>
+        <div><label>Quantity</label><input name="quantity" type="number" min="10" placeholder="e.g. 100" required></div>
+        <div class="full"><label>Notes</label><textarea name="notes" rows="3" placeholder="Delivery timing, recurring supply, anything else"></textarea></div>
+      </div>
+      <button type="submit">Send quote request</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="brand">MAK<b style="color:var(--amber)">RAO</b><span class="reg">®</span></div>
+      <p>Workspace essentials, made to be reliable.<br>United Arab Emirates.</p>
+    </div>
+    <div>
+      <p class="spec" style="color:var(--paper-faint);margin-bottom:8px">Shop</p>
+      <a class="amz" href="https://www.amazon.ae/stores/page/7575E3EE-64D5-4D11-8C70-DFA39236BD59">Amazon.ae Brand Store →</a>
+    </div>
+    <div>
+      <p class="spec" style="color:var(--paper-faint);margin-bottom:8px">Bulk</p>
+      <a class="amz" data-wa="Hi MAKRAO — I'd like a bulk quote.">WhatsApp us →</a>
+    </div>
+  </div>
+  <div class="wrap"><div class="foot-legal">© 2026 MAKRAO® · makrao.com · All products sold and shipped via Amazon.ae unless bulk-ordered direct.</div></div>
+</footer>
+
+<a class="wa-float" data-wa="Hi MAKRAO — I'd like a bulk quote." aria-label="WhatsApp us">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>
+</a>
+
+<script>
+/* =========================================================
+   EDIT ONLY THIS BLOCK
+   1) WA_NUMBER — WhatsApp Business number, digits only, intl (e.g. 9715XXXXXXXX)
+   2) Products below carry your real Amazon data. Photos auto-load by ASIN.
+      To adjust bulk tiers, edit the .tiers section in the HTML above.
+   ========================================================= */
+const WA_NUMBER = "971552974808";
+
+const PRODUCTS = [
+  { asin:"B0DW91Y72T", name:"Mouse Pad — Non-Slip Rubber Base, Stitched Edges",
+    desc:"The everyday classic. Lycra cloth top, waterproof, stitched anti-fray edges. Our best seller.",
+    price:"14.99", rating:"4.3", tag:"Best seller" },
+  { asin:"B0DWN47X4H", name:"Ergonomic Mouse Pad with Gel Wrist Rest",
+    desc:"Memory-gel wrist support for long sessions. Non-slip base, comfortable all-day feel.",
+    price:"19.99", rating:"4.1", tag:"Ergonomic" },
+  { asin:"B0DXLX1G3L", name:"3-Pack Mouse Pads — 10.23 × 8.26 in, Black",
+    desc:"Three of the classic pad, stitched edges, non-slip base. The easy multi-desk buy.",
+    price:"29.35", rating:"4.4", tag:"3-pack" },
+  { asin:"B0DHLFXGHX", name:"New Driver Car Sign Sticker — Self-Adhesive (RTA)",
+    desc:"Arabic/English 'New Driver' سائق جديد sign. Weatherproof, RTA-style, easy application.",
+    price:"17.99", rating:"", tag:"UAE-specific" },
+  { asin:"B0DVB54WJ4", name:"New Driver Car Sign Sticker — Pack of 2",
+    desc:"Two-pack of the New Driver سائق جديد sign. Spare or share, same weatherproof finish.",
+    price:"23.99", rating:"", tag:"2-pack" },
+  { asin:"B0FS2CCK28", name:"Clear Tape Rolls — Pack of 12, ½ in × 25 m",
+    desc:"Transparent office tape, twelve rolls. Clean tear, strong hold, everyday stationery staple.",
+    price:"14.99", rating:"", tag:"12-pack" },
+  { asin:"B0H7671PJT", name:"Clear Adhesive Tape Rolls — 1.9 cm × 24.68 m, Pack of 8",
+    desc:"Wider 8-roll pack, strong transparent adhesive. For packing and heavier stationery jobs.",
+    price:"14.99", rating:"", tag:"8-pack" },
+  { asin:"B0DXVZRFVV", name:"Type-C Cable 1M — USB-C Nylon Braided Fast Charging",
+    desc:"Braided USB-A to USB-C, tangle-resistant, fast charge. One metre of everyday reliability.",
+    price:"16.39", rating:"5.0", tag:"5.0★" },
+  { asin:"B0DYVGDV4Q", name:"USB-C to USB-C Cable 1M — 60W Nylon Braided",
+    desc:"60W USB-C to USB-C, nylon braided, fast charge and data. Laptop and phone ready.",
+    price:"17.50", rating:"5.0", tag:"60W" },
+];
+/* ===================== end edit block ===================== */
+
+const wa = t => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(t)}`;
+const amz = a => `https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=${a}&Format=_SL500_&ID=AsinImage&MarketPlace=AE&ServiceVersion=20070822`;
+const star = `<svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg>`;
+
+document.querySelectorAll("[data-wa]").forEach(el => el.href = wa(el.dataset.wa));
+
+const grid = document.getElementById("grid");
+const sel = document.getElementById("prodsel");
+PRODUCTS.forEach(p => {
+  const t = document.createElement("div");
+  t.className = "tile";
+  t.innerHTML = `
+    <div class="shot">
+      ${p.tag ? `<span class="tag">${p.tag}</span>` : ""}
+      ${p.rating ? `<span class="rating">${star}${p.rating}</span>` : ""}
+      <img src="${amz(p.asin)}" alt="${p.name}" loading="lazy"
+           onerror="this.remove();this.parentElement.insertAdjacentHTML('beforeend','<span class=ph>${p.asin}</span>')">
+    </div>
+    <div class="body">
+      <h3>${p.name}</h3>
+      <p class="desc">${p.desc}</p>
+      <div class="meta">
+        <div class="price"><small>AED</small>${p.price}</div>
+      </div>
+      <div class="actions">
+        <a class="mini-amz" href="https://www.amazon.ae/dp/${p.asin}">Amazon</a>
+        <a class="mini-wa" href="${wa(`Hi MAKRAO — bulk quote:\n${p.name} (${p.asin})\nQuantity: `)}">
+          ${`<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2z"/></svg>`} Bulk</a>
+      </div>
+    </div>`;
+  grid.appendChild(t);
+  const o = document.createElement("option");
+  o.textContent = `${p.name} (${p.asin})`;
+  sel.appendChild(o);
+});
+</script>
+</body>
+</html>
